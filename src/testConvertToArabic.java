@@ -5,8 +5,9 @@ import org.junit.Test;
 public class testConvertToArabic {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void whenConverterIsPassedAnIItReturnsAOne() {
+		convertToArabic convertToArabic =  new convertToArabic();
+		assertTrue(1 == convertToArabic.convert("I"));
 	}
 
 }
