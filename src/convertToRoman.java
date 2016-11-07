@@ -2,59 +2,15 @@
 public class convertToRoman {
 
 	String romanNumeralString = "";
+	int[] arabicValues = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+	String[] romanValues = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 	
 	public String convert(Integer num) {
-		while (num >= 1000) {
-			num = num - 1000;
-			romanNumeralString = romanNumeralString + "M";
-		}
-		while (num >= 900) {
-			num = num - 900;
-			romanNumeralString = romanNumeralString + "CM";
-		}
-		while (num >= 500) {
-			num = num - 500;
-			romanNumeralString = romanNumeralString + "D";
-		}
-		while (num >= 400) {
-			num = num - 400;
-			romanNumeralString = romanNumeralString + "CD";
-		}
-		while (num >= 100) {
-			num = num - 100;
-			romanNumeralString = romanNumeralString + "C";
-		}
-		while (num >= 90) {
-			num = num - 90;
-			romanNumeralString = romanNumeralString + "XC";
-		}
-		while (num >= 50) {
-			num = num - 50;
-			romanNumeralString = romanNumeralString + "L";
-		}
-		while (num >= 40) {
-			num = num - 40;
-			romanNumeralString = romanNumeralString + "XL";
-		}
-		while (num >= 10) {
-			num = num - 10;
-			romanNumeralString = romanNumeralString + "X";
-		}
-		while (num >= 9) {
-			num = num - 9;
-			romanNumeralString = romanNumeralString + "IX";
-		}
-		while (num >= 5) {
-			num = num - 5;
-			romanNumeralString = romanNumeralString + "V";
-		}
-		while (num >= 4) {
-			num = num - 4;
-			romanNumeralString = romanNumeralString + "IV";
-		}
-		while (num > 0) {
-			num = num - 1;
-			romanNumeralString = romanNumeralString + "I";
+		for	(int i = 0; i < arabicValues.length; i++){
+			while (num >= arabicValues[i]) {
+				num = num - arabicValues[i];
+				romanNumeralString = romanNumeralString + romanValues[i];
+			}
 		}
 		return romanNumeralString;
 	}
