@@ -10,4 +10,9 @@ public class testConvertToRomanTest {
 		assertEquals("I", convertToRoman.convert(1));
 	}
 	
+	@Test
+	public void whenConverterIsPassedAThreeItReturnsIII() {
+		convertToRoman convertToRoman =  new convertToRoman();
+		assertEquals("III", convertToRoman.convert(3));
+	}
 }
