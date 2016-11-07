@@ -15,4 +15,10 @@ public class testConvertToRomanTest {
 		convertToRoman convertToRoman =  new convertToRoman();
 		assertEquals("III", convertToRoman.convert(3));
 	}
+	
+	@Test
+	public void whenConverterIsPassedANineItReturnsIX(){
+		convertToRoman convertToRoman =  new convertToRoman();
+		assertEquals("IX", convertToRoman.convert(9));
+	}
 }
