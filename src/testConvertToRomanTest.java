@@ -27,4 +27,10 @@ public class testConvertToRomanTest {
 		convertToRoman convertToRoman =  new convertToRoman();
 		assertEquals("MLXVI", convertToRoman.convert(1066));
 	}
+	
+	@Test
+	public void whenCOnverterIsPassedOneThousandNineHundredEightyNineItReturnsMCMLXXXIX(){
+		convertToRoman convertToRoman =  new convertToRoman();
+		assertEquals("MCMLXXXIX", convertToRoman.convert(1989));
+	}
 }
