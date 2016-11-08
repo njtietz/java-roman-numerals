@@ -27,4 +27,10 @@ public class testConvertToArabic {
 		convertToArabic convertToArabic =  new convertToArabic();
 		assertTrue(1066 == convertToArabic.convert("MLXVI"));
 	}
+	
+	@Test
+	public void whenConverterIsPassedMCMLXXXIXItReturnsOneThousandNineHundredEightyNine() {
+		convertToArabic convertToArabic =  new convertToArabic();
+		assertTrue(1989 == convertToArabic.convert("MCMLXXXIX"));
+	}
 }
