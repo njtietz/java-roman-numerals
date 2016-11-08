@@ -12,8 +12,6 @@ public class convertToArabic {
 					if (romanValues[i].equals(num.substring(0, romanValues[i].length()))){
 						num = num.substring(romanValues[i].length());
 						arabicValue = arabicValue + arabicValues[i];
-						System.out.println(num);
-						System.out.println(arabicValue);
 					}
 				}
 			}
