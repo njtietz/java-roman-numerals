@@ -9,5 +9,11 @@ public class testConvertToArabic {
 		convertToArabic convertToArabic =  new convertToArabic();
 		assertTrue(1 == convertToArabic.convert("I"));
 	}
+	
+	@Test
+	public void whenConverterIsPassedIIIItReturnsThree() {
+		convertToArabic convertToArabic =  new convertToArabic();
+		assertTrue(3 == convertToArabic.convert("III"));
+	}
 
 }
