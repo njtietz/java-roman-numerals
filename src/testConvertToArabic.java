@@ -16,4 +16,9 @@ public class testConvertToArabic {
 		assertTrue(3 == convertToArabic.convert("III"));
 	}
 
+	@Test
+	public void whenConverterIsPassedIXItReturnsANine() {
+		convertToArabic convertToArabic =  new convertToArabic();
+		assertTrue(9 == convertToArabic.convert("IX"));
+	}
 }

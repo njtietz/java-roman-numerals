@@ -6,9 +6,17 @@ public class convertToArabic {
 	String[] romanValues = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 	
 	public Integer convert(String num) {
-		while (num.length() > 0) {
-			num = num.substring(romanValues[12].length());
-			arabicValue = arabicValue + arabicValues[12];
+		while (!num.equals("")) {
+			for	(int i = 0; i < romanValues.length; i++){
+				if (num.length() >= romanValues[i].length()){
+					if (romanValues[i].equals(num.substring(0, romanValues[i].length()))){
+						num = num.substring(romanValues[i].length());
+						arabicValue = arabicValue + arabicValues[i];
+						System.out.println(num);
+						System.out.println(arabicValue);
+					}
+				}
+			}
 		}
 		return arabicValue;
 	}
